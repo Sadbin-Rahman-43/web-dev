@@ -1,4 +1,12 @@
-//1. take an integer (last digit of your ID) as input and print the next integer of it.
-let x = 43 + 1;
+const readline = require("readline");
 
-console.log(x);
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question("Enter the last digit of your ID: ", (input) => {
+  const lastDigit = parseInt(input);
+  console.log("Next integer:", lastDigit+1);
+  rl.close();
+});
